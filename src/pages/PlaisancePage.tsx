@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Anchor, Shield, FileText, AlertTriangle, CheckCircle } from 'lucide-react';
 import Footer from '../components/Footer';
 import CtaBanner from '../components/CtaBanner';
-import AdminsBanner from '../components/AdminsBanner';
 
 const cases = [
   {
@@ -105,7 +104,6 @@ export default function PlaisancePage() {
         </div>
       </section>
 
-      <AdminsBanner />
       <CtaBanner title="Besoin d'une expertise plaisance ?" subtitle="Contactez-nous pour votre bateau de plaisance dans l'Océan Indien." />
       <Footer />
     </div>

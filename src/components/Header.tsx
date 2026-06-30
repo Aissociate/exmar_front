@@ -34,16 +34,6 @@ const nav = [
       { label: 'Mandats assureurs & tribunaux', icon: FileText },
     ],
   },
-  {
-    label: 'Démarches Admin.',
-    to: '/demarches-administratives',
-    items: [
-      { label: 'Mutation de propriété — 90 €', icon: FileText },
-      { label: "Certificat d'enregistrement — 120 €", icon: FileText },
-      { label: 'Modification administrative — 60 €', icon: FileText },
-      { label: 'Radiation / Cession — 80 €', icon: FileText },
-    ],
-  },
   { label: "L'Expert", to: '/l-expert' },
   { label: 'Contact', to: '/contact' },
 ];
