@@ -39,17 +39,14 @@ export function DashboardPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (user) {
-      loadDashboardData();
-    }
-  }, [user]);
+    loadDashboardData();
+  }, []);
 
   const loadDashboardData = async () => {
     try {
       const { data: dossiersData, error } = await supabase
         .from('dossiers')
         .select('*')
-        .eq('user_id', user?.id)
         .order('updated_at', { ascending: false })
         .limit(5);
 
@@ -59,8 +56,7 @@ export function DashboardPage() {
 
       const { data: allDossiers, error: statsError } = await supabase
         .from('dossiers')
-        .select('status')
-        .eq('user_id', user?.id);
+        .select('status');
 
       if (statsError) throw statsError;
 

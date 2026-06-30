@@ -26,10 +26,8 @@ export function SettingsPage() {
   });
 
   useEffect(() => {
-    if (user) {
-      loadProfile();
-    }
-  }, [user]);
+    loadProfile();
+  }, []);
 
   useEffect(() => {
     loadContactEmail();
@@ -62,7 +60,6 @@ export function SettingsPage() {
       const { data, error } = await supabase
         .from('expert_profiles')
         .select('*')
-        .eq('user_id', user?.id)
         .maybeSingle();
 
       if (error) throw error;
@@ -94,26 +91,19 @@ export function SettingsPage() {
       const { data: existing } = await supabase
         .from('expert_profiles')
         .select('id')
-        .eq('user_id', user?.id)
         .maybeSingle();
 
       if (existing) {
         const { error } = await supabase
           .from('expert_profiles')
-          .update({
-            ...formData,
-            updated_at: new Date().toISOString(),
-          })
-          .eq('user_id', user?.id);
+          .update({ ...formData, updated_at: new Date().toISOString() })
+          .eq('id', existing.id);
 
         if (error) throw error;
       } else {
         const { error } = await supabase
           .from('expert_profiles')
-          .insert({
-            ...formData,
-            user_id: user?.id,
-          });
+          .insert({ ...formData });
 
         if (error) throw error;
       }

@@ -15,17 +15,14 @@ export function DossiersPage() {
   const [filterStatus, setFilterStatus] = useState<string>('all');
 
   useEffect(() => {
-    if (user) {
-      loadDossiers();
-    }
-  }, [user]);
+    loadDossiers();
+  }, []);
 
   const loadDossiers = async () => {
     try {
       const { data, error } = await supabase
         .from('dossiers')
         .select('*')
-        .eq('user_id', user?.id)
         .order('updated_at', { ascending: false });
 
       if (error) throw error;

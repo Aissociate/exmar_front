@@ -120,14 +120,7 @@ export function NewDossierPage() {
   };
 
   const saveDocumentsToDossier = async (dossierId: string) => {
-    if (uploadedDocuments.length === 0) {
-      return;
-    }
-
-    if (!user || !user.id) {
-      showToast('Utilisateur non authentifié', 'error');
-      throw new Error('Utilisateur non authentifié');
-    }
+    if (uploadedDocuments.length === 0) return;
 
     logActivity('saving_documents_to_dossier', 'info', {
       dossierId,
@@ -140,7 +133,7 @@ export function NewDossierPage() {
       try {
         const fileExt = docData.file.name.split('.').pop();
         const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
-        const filePath = `${user.id}/${dossierId}/${fileName}`;
+        const filePath = `public/${dossierId}/${fileName}`;
 
         const { error: uploadError } = await supabase.storage
           .from('documents')
@@ -158,7 +151,7 @@ export function NewDossierPage() {
           .from('documents')
           .insert({
             dossier_id: dossierId,
-            user_id: user.id,
+            user_id: user?.id ?? null,
             file_name: docData.file.name,
             file_path: filePath,
             file_type: docData.file.type,
@@ -215,14 +208,10 @@ export function NewDossierPage() {
     });
 
     try {
-      if (!user || !user.id) {
-        throw new Error('Vous devez être connecté pour créer un dossier');
-      }
-
       const { data, error } = await supabase
         .from('dossiers')
         .insert({
-          user_id: user.id,
+          user_id: null,
           type: formData.type,
           vessel_name: formData.vessel_name || null,
           vessel_type: formData.vessel_type || null,
