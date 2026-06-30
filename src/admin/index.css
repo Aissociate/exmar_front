@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  header,
+  nav,
+  footer,
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  #report-content {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .markdown-content h1 {
+    page-break-after: avoid;
+  }
+
+  .markdown-content h2 {
+    page-break-after: avoid;
+  }
+
+  .markdown-content h3 {
+    page-break-after: avoid;
+  }
+
+  .break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-height: 400px;
+    page-break-inside: avoid;
+    page-break-after: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .markdown-content img {
+    box-shadow: none !important;
+  }
+}

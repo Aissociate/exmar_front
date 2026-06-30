@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Package, Wrench, Scale, CheckCircle } from 'lucide-react';
 import Footer from '../components/Footer';
 import CtaBanner from '../components/CtaBanner';
-import AdminsBanner from '../components/AdminsBanner';
 
 const inspections = [
   { title: 'Holds Inspection', desc: 'Inspection des cales avant chargement' },
@@ -145,7 +144,6 @@ export default function CommercePage() {
         </div>
       </section>
 
-      <AdminsBanner />
       <CtaBanner title="Besoin d'une expertise commerciale ?" subtitle="TSO, cargo survey, inspections, mandats judiciaires — contactez-nous." />
       <Footer />
     </div>

@@ -1,0 +1,4 @@
+# Netlify / Cloudflare Pages SPA rewrites
+# Admin sub-app first, then the public site. Both return 200 (client-side routing).
+/admin/*   /admin/index.html   200
+/*         /index.html         200

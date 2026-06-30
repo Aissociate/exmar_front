@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Anchor, Shield, FileText, Scale, CheckCircle } from 'lucide-react';
 import Footer from '../components/Footer';
 import CtaBanner from '../components/CtaBanner';
-import AdminsBanner from '../components/AdminsBanner';
 
 const cases = [
   {
@@ -100,7 +99,6 @@ export default function PechePage() {
         </div>
       </section>
 
-      <AdminsBanner />
       <CtaBanner title="Besoin d'une expertise pêche ?" subtitle="Contactez-nous pour votre navire de pêche professionnel." />
       <Footer />
     </div>

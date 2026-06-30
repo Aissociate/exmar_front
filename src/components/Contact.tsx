@@ -44,6 +44,8 @@ export default function Contact() {
       setErrorMessage('Une erreur est survenue. Veuillez réessayer.');
       console.error('Submission error:', error);
     } else {
+      // Best-effort email notification (does not block the submission).
+      supabase.functions.invoke('send-contact-email', { body: formData }).catch(() => {});
       setStatus('success');
       setFormData({
         name: '',
@@ -242,13 +244,13 @@ export default function Contact() {
                     <p className="text-white/80">+262 692 86 01 10</p>
                   </div>
                 </a>
-                <a href="mailto:exmar.oi.contact@gmail.com" className="flex items-start gap-4 hover:opacity-80 transition-opacity">
+                <a href="mailto:contact@exmar-oi.com" className="flex items-start gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Email</p>
-                    <p className="text-white/80">exmar.oi.contact@gmail.com</p>
+                    <p className="text-white/80">contact@exmar-oi.com</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-4">

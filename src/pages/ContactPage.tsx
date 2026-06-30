@@ -9,7 +9,6 @@ const subjectOptions = [
   'Expertise plaisance',
   'Expertise pêche',
   'Commerce & Industrie',
-  'Démarche administrative',
   'Mission judiciaire / assureur',
   'Autre / renseignement',
 ];
@@ -34,6 +33,8 @@ export default function ContactPage() {
       setStatus('error');
       setErrorMessage('Une erreur est survenue. Veuillez réessayer.');
     } else {
+      // Best-effort email notification (does not block the submission).
+      supabase.functions.invoke('send-contact-email', { body: formData }).catch(() => {});
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', company: '', subject: '', message: '', location: '' });
     }
@@ -115,7 +116,7 @@ export default function ContactPage() {
                 <div className="space-y-5">
                   {[
                     { Icon: Phone, label: 'Téléphone', value: '+262 692 86 01 10', href: 'tel:+262692860110' },
-                    { Icon: Mail, label: 'Email', value: 'exmar.oi.contact@gmail.com', href: 'mailto:exmar.oi.contact@gmail.com' },
+                    { Icon: Mail, label: 'Email', value: 'contact@exmar-oi.com', href: 'mailto:contact@exmar-oi.com' },
                   ].map(({ Icon, label, value, href }) => (
                     <a key={label} href={href} className="flex items-start gap-4 group hover:opacity-80 transition-opacity">
                       <div className="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
