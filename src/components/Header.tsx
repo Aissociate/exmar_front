@@ -5,13 +5,13 @@ import { Menu, X, ChevronDown, Anchor, Shield, FileText, User } from 'lucide-rea
 const nav = [
   { label: 'Accueil', to: '/' },
   {
-    label: 'Plaisance',
-    to: '/plaisance',
+    label: 'Commerce & Industrie',
+    to: '/commerce-industrie',
     items: [
-      { label: 'Expertise pré-achat', icon: Anchor },
-      { label: 'Expertise pré-vente', icon: Anchor },
-      { label: 'Expertise pré-assurance', icon: Shield },
-      { label: "Constat d'avarie & Sinistre", icon: FileText },
+      { label: 'Terminal Safety Officer (TSO)', icon: Shield },
+      { label: 'Expertise marchandises', icon: FileText },
+      { label: 'Inspections techniques', icon: Anchor },
+      { label: 'Mandats assureurs & tribunaux', icon: FileText },
     ],
   },
   {
@@ -25,16 +25,16 @@ const nav = [
     ],
   },
   {
-    label: 'Commerce & Industrie',
-    to: '/commerce-industrie',
+    label: 'Plaisance',
+    to: '/plaisance',
     items: [
-      { label: 'Terminal Safety Officer (TSO)', icon: Shield },
-      { label: 'Expertise marchandises', icon: FileText },
-      { label: 'Inspections techniques', icon: Anchor },
-      { label: 'Mandats assureurs & tribunaux', icon: FileText },
+      { label: 'Expertise pré-achat', icon: Anchor },
+      { label: 'Expertise pré-vente', icon: Anchor },
+      { label: 'Expertise pré-assurance', icon: Shield },
+      { label: "Constat d'avarie & Sinistre", icon: FileText },
     ],
   },
-  { label: "L'Expert", to: '/l-expert' },
+  { label: "Conseil de l'expert", to: '/l-expert' },
   { label: 'Contact', to: '/contact' },
 ];
 
