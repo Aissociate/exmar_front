@@ -19,7 +19,7 @@ const cases = [
     services: ["Conformité navire/terminal", "Surveillance déchargement", "Protocoles ISGOTT/MARPOL", "Gestion urgences", "Rapport d'opération"],
     cta: 'Demander une intervention TSO',
     icon: Shield,
-    img: 'https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-office-plans.webp',
   },
   {
     num: '02',
@@ -29,7 +29,7 @@ const cases = [
     services: ["Inspection à réception", "Constat état cargaison", "Identification dommages", "Détermination causes", "Rapport certifié opposable"],
     cta: 'Demander une expertise marchandises',
     icon: Package,
-    img: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-cargo-container.webp',
   },
 ];
 
@@ -38,7 +38,7 @@ export default function CommercePage() {
     <div className="min-h-screen bg-navy-deep">
       <section className="relative pt-[74px] pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop" alt="Commerce & Industrie" className="w-full h-full object-cover" />
+          <img src="/survey-cargo-container.webp" alt="Commerce & Industrie" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-deep/85" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-deep" />
         </div>
@@ -137,7 +137,7 @@ export default function CommercePage() {
               </Link>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-80">
-              <img src="https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop" alt="Judiciaire" className="w-full h-full object-cover" />
+              <img src="/survey-office-plans.webp" alt="Judiciaire" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-navy-deep/40" />
             </div>
           </div>

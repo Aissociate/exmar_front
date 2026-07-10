@@ -177,9 +177,9 @@ export default function ExpertPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { src: '/ChatGPT_Image_11_mai_2026,_15_04_17_(2).png', label: 'Inspection Navire Pêche' },
-              { src: '/ChatGPT_Image_11_mai_2026,_15_04_17_(3).png', label: 'Expertise Corps & Plaisance' },
-              { src: '/ChatGPT_Image_11_mai_2026,_15_04_16_(1).png', label: 'Expertise des Facultés' },
+              { src: '/survey-fishing-vessel.webp', label: 'Inspection Navire Pêche' },
+              { src: '/survey-hull-moisture.webp', label: 'Expertise Corps & Plaisance' },
+              { src: '/survey-cargo-container.webp', label: 'Expertise des Facultés' },
             ].map((img, i) => (
               <div key={i} className="relative rounded-xl overflow-hidden h-56 group">
                 <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

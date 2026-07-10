@@ -49,21 +49,21 @@ const sectors = [
     title: 'Plaisance',
     desc: "Expertise pré-achat, pré-vente, pré-assurance et sinistres pour les navires de plaisance.",
     to: '/plaisance',
-    img: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    img: '/survey-marina-pontoon.webp',
   },
   {
     icon: Fish,
     title: 'Pêche',
     desc: "Expertises pour navires de pêche professionnels — achat, vente, assurance, sinistres et litiges.",
     to: '/peche',
-    img: 'https://images.pexels.com/photos/2249959/pexels-photo-2249959.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    img: '/survey-fishing-dock.webp',
   },
   {
     icon: Container,
     title: 'Commerce & Industrie',
     desc: "TSO, cargo survey, inspections techniques, holds inspection, draft survey — opérateurs portuaires.",
     to: '/commerce-industrie',
-    img: 'https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    img: '/survey-cargo-container.webp',
   },
 ];
 

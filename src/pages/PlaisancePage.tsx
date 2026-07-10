@@ -12,7 +12,7 @@ const cases = [
     services: ["Inspection coque & structure", "Contrôle humidité", "Bilan moteur", "Équipements sécurité", "Rapport certifié"],
     cta: 'Demander une expertise pré-achat',
     icon: Anchor,
-    img: 'https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-hull-moisture.webp',
   },
   {
     num: '02',
@@ -22,7 +22,7 @@ const cases = [
     services: ["État général certifié", "Contrôle points clés", "Estimation valeur vénale", "Rapport communicable"],
     cta: 'Faire expertiser mon bateau',
     icon: Shield,
-    img: 'https://images.pexels.com/photos/1007836/pexels-photo-1007836.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-yacht-hull.webp',
   },
   {
     num: '03',
@@ -32,7 +32,7 @@ const cases = [
     services: ["Évaluation valeur assurable", "Contrôle état général", "Rapport certifié transmissible à l'assureur"],
     cta: 'Demander une expertise pré-assurance',
     icon: FileText,
-    img: 'https://images.pexels.com/photos/3894874/pexels-photo-3894874.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-marina-pontoon.webp',
   },
   {
     num: '04',
@@ -42,7 +42,7 @@ const cases = [
     services: ["Constat d'avarie contradictoire", "Évaluation dommages", "Estimation remise en état", "Suivi travaux optionnel"],
     cta: 'Déclarer un sinistre',
     icon: AlertTriangle,
-    img: 'https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-yacht-hull.webp',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function PlaisancePage() {
       {/* Page hero */}
       <section className="relative pt-[74px] pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop" alt="Plaisance" className="w-full h-full object-cover" />
+          <img src="/survey-marina-tablet.webp" alt="Plaisance" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-deep/85" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-deep" />
         </div>
