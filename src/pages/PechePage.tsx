@@ -12,7 +12,7 @@ const cases = [
     services: ["Inspection coque & structure", "Contrôle humidité", "Bilan moteur", "Équipements pêche & sécurité", "Rapport certifié"],
     cta: 'Demander une expertise navire',
     icon: Anchor,
-    img: 'https://images.pexels.com/photos/2249959/pexels-photo-2249959.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-fishing-vessel.webp',
   },
   {
     num: '02',
@@ -22,7 +22,7 @@ const cases = [
     services: ["Évaluation valeur vénale & assurable", "État général certifié", "Rapport transmissible assureur"],
     cta: 'Demander une expertise pré-assurance',
     icon: Shield,
-    img: 'https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-fishing-net.webp',
   },
   {
     num: '03',
@@ -32,7 +32,7 @@ const cases = [
     services: ["Constat contradictoire", "Évaluation dommages", "Estimation remise en état", "Suivi travaux", "Rapport assureur"],
     cta: 'Déclarer un sinistre',
     icon: FileText,
-    img: 'https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-fishing-dock.webp',
   },
   {
     num: '04',
@@ -42,7 +42,7 @@ const cases = [
     services: ["Expertise contradictoire ou amiable", "Rapport technique circonstancié", "Expert Cour d'appel Saint-Denis", "Assistance audiences"],
     cta: 'Nous contacter pour un litige',
     icon: Scale,
-    img: 'https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: '/survey-office-plans.webp',
   },
 ];
 
@@ -51,7 +51,7 @@ export default function PechePage() {
     <div className="min-h-screen bg-navy-deep">
       <section className="relative pt-[74px] pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.pexels.com/photos/2249959/pexels-photo-2249959.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop" alt="Pêche" className="w-full h-full object-cover" />
+          <img src="/survey-fishing-dock.webp" alt="Pêche" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy-deep/85" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-deep" />
         </div>
