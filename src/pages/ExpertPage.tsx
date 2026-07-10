@@ -175,11 +175,12 @@ export default function ExpertPage() {
       {/* Gallery */}
       <section className="bg-navy-deep py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { src: '/survey-fishing-vessel.webp', label: 'Inspection Navire Pêche' },
               { src: '/survey-hull-moisture.webp', label: 'Expertise Corps & Plaisance' },
               { src: '/survey-cargo-container.webp', label: 'Expertise des Facultés' },
+              { src: '/survey-utm-hull.webp', label: 'Mesures d\'épaisseur — ultrasons' },
             ].map((img, i) => (
               <div key={i} className="relative rounded-xl overflow-hidden h-56 group">
                 <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
