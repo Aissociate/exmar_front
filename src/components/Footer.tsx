@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
-              <img src="/image.png" alt="EXMAR-OI" className="h-20 w-auto mb-5 brightness-0 invert" />
+              <img src="/image copy.png" alt="EXMAR-OI" className="h-20 w-auto mb-5 brightness-0 invert" />
               <p className="text-muted text-sm leading-relaxed mb-5">
                 Expertise Maritime Océan Indien — 47 ans au service des professionnels de la mer.
               </p>
