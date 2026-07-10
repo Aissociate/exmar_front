@@ -72,7 +72,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[74px]">
             <Link to="/" className="flex-shrink-0">
-              <img src="/image copy.png" alt="EXMAR-OI" className="h-11 w-auto brightness-0 invert" />
+              <img src="/image copy.png" alt="EXMAR-OI" className="h-14 w-auto brightness-0 invert" />
             </Link>
 
             {/* Desktop nav */}
